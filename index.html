@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Todo List</h1>
+
+      <section aria-label="Add a new task">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="Input_Field"
+            class="input-field"
+            placeholder="What needs to be done?"
+            aria-label="New task description"
+            maxlength="501"
+          />
+          <button id="Add_Button" class="add-button" type="button">Add</button>
+        </div>
+        <p id="input-error" class="input-error" role="alert" aria-live="polite"></p>
+      </section>
+
+      <section aria-label="Filter tasks">
+        <div id="filter-bar" class="filter-bar" role="group" aria-label="Filter tasks by status">
+          <button class="filter-button active" data-filter="all" type="button">All</button>
+          <button class="filter-button" data-filter="active" type="button">Active</button>
+          <button class="filter-button" data-filter="completed" type="button">Completed</button>
+        </div>
+      </section>
+
+      <section aria-label="Task list">
+        <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+        <p id="empty-state" class="empty-state" aria-live="polite">No tasks yet. Add one above!</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
